@@ -1,0 +1,298 @@
+@charset "utf-8";
+
+
+/*========= バー表示のためのCSS ===============*/
+
+/*タイムライン全体の設定*/
+.timeline{
+	max-width:400px;
+	width:100%;
+	margin:50px auto;
+	padding:0 0%;
+}
+
+.timeline li{
+    /*線の起点とするためrelativeを設定*/
+    position: relative;
+	list-style: none;
+	padding:0 0 20px 0;
+}
+
+.timeline dl{
+	margin:0 0 20px 3em;
+}
+
+.timeline dd strong{
+	display: block;
+	padding:10px 0;
+}
+
+/*絶対配置で線を設定*/
+.border-line {
+    /*線の位置*/
+	position: absolute;
+	left:0.2em;
+	top:0;
+	width:2px;/*線の太さ*/
+	height:0;/*はじめは高さを0に*/
+	background: #ccc;
+}
+
+/*タイムラインの見出し横の丸の位置と形状*/
+.timeline li::after{
+	content:'';
+	position: absolute;
+	top:0;
+	left:0;
+	width:10px;
+	height: 10px;
+	background:black;
+	border-radius: 50%;
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+header{
+	background:black;
+}
+
+h1{
+	font-size:1.5rem;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 20px;
+	color: #fff;
+}
+
+/* ---history----*/
+h2{
+	color: white;
+}
+
+h2,h3{
+	font-size:1.2rem;
+	text-align: center;
+	margin: 0 0 30px 0;
+}
+
+.profile-img {
+  width: 100%;
+  margin-right: 0%;
+  margin-left: 0%;
+  flex: 1;
+}
+.profile-img img {
+	width: 60%;
+  border-radius: 50%;
+}
+
+.profile-body {
+  flex: 2;
+  text-align: left;
+  width: auto;
+  margin-left: 0%;
+}
+p,ul{
+	margin-top:20px;	
+}
+
+a{
+	color:#333;
+}
+
+small{
+	background:black;
+	color:#fff;
+	display: block;
+	text-align: center;
+	padding:20px;
+}
+
+
+section{
+	padding:30px;
+}
+section:nth-child(2n){
+	padding:30px 30px 0px;
+}
+
+section:first-child{
+	background:black;
+}
+
+section:nth-child(3n){
+	background:black;
+}
+
+.profile {
+	color: white;
+ display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.h2.top{
+	color: white;
+}
+
+.because{
+	text-align: center;
+}
+
+.comic-img{
+	width: 300px;
+}
+.MMA-img{
+	width:auto
+}
+
+/* -----MENU-----*/
+.menu li{
+	list-style: none;
+	width: 25%;
+	float: left;
+	color: black;	
+}
+.menu{
+	width: 800px;
+	margin-left: 385px;
+	margin-right: 50px;
+}
+.menu{
+	padding: 0%;
+	
+}
+
+.menu li a:hover{
+	text-decoration: none;
+}
+
+/* --------hobbies---------- */
+
+.hobby{
+	text-align: center;
+	border: black;
+	border:1px solid black;
+	margin-bottom: 5px;
+}
+
+/* ----hobbiesリンクの見せ方----*/
+.works{
+	margin-bottom: 30px;
+}
+
+.works-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -40px;
+  justify-content: center;
+}
+
+.works-item{
+	margin-left: 3px;
+	margin-right: 35px;
+	 margin-bottom: 40px;
+}
+
+.works-item:hover {
+  opacity: 90%;
+}
+
+.works-item:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.column {
+  margin: 15px 15px 0;
+  padding: 0;
+}
+.column:last-child {
+  padding-bottom: 60px;
+}
+.column::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.column div {
+  position: relative;
+  float: left;
+  width: 300px;
+  height: 300px;
+  margin: 0 0 0 25px;
+  padding: 0;
+}
+.column div:first-child {
+  margin-left: 0;
+}
+.column div span {
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  z-index: -1;
+  display: block;
+  width: 300px;
+  margin: 0;
+  padding: 0;
+  color:white;
+  font-size: 18px;
+  text-decoration: none;
+  text-align: center;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  opacity: 0;
+}
+figure {
+  width: 300px;
+  height: 300px;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  overflow: hidden;
+}
+figure:hover+span {
+  bottom: -36px;
+  opacity: 1;
+}
+
+.hover03 figure img {
+  border: 1px solid #e6e6e6;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.hover03 figure:hover img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.works-img img {
+  border: 1px solid #e6e6e6;
+
+  width:300px;
+  height:300px;
+}
+
+.works-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+/*------スライダーのためのcss------*/
+.slider img {
+    width:100%;/*スライダー内の画像を横幅100%に*/
+    height:100%;
+}
+.slider .slick-slide {
+    margin:0 10px;/*スライド左右の余白調整*/
+}
+.slick-track{ /* 高さを揃えるコード追加 */
+            height: 150px;
+}
+
+
